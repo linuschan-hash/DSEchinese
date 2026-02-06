@@ -1,0 +1,209 @@
+/* 基本樣式 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    background-color: #f4f7f6;
+    color: #333;
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #005f73;
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #e0e0e0;
+    font-size: 0.9rem;
+}
+
+/* 導覽列 */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #0a9396;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: #94d2bd;
+}
+
+nav a.active {
+    background-color: #005f73;
+    font-weight: bold;
+}
+
+/* 內容卡片 */
+.card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card h3, .card h4 {
+    margin-top: 0;
+    color: #005f73;
+}
+
+/* 內容切換 */
+.tab-content {
+    display: none;
+    animation: fadeIn 0.5s;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* 快速導覽 */
+.quick-nav {
+    display: flex;
+    gap: 15px;
+    justify-content: space-around;
+}
+.nav-card {
+    flex: 1;
+    background: #e9d8a6;
+    color: #333;
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+.nav-card:hover {
+    transform: translateY(-5px);
+}
+
+/* 字詞卡 */
+.flashcard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.flashcard {
+    width: 250px;
+    height: 150px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+.flashcard-front, .flashcard-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.6s;
+    font-size: 1.5rem;
+}
+.flashcard-front {
+    background-color: #94d2bd;
+    color: black;
+}
+.flashcard-back {
+    background-color: #ee9b00;
+    color: white;
+    transform: rotateY(180deg);
+    font-size: 1rem;
+    padding: 10px;
+    flex-direction: column;
+}
+.flashcard.flipped .flashcard-front {
+    transform: rotateY(180deg);
+}
+.flashcard.flipped .flashcard-back {
+    transform: rotateY(360deg);
+}
+.flashcard-back p {
+    margin: 5px;
+}
+
+/* 測驗 */
+#submit-quiz {
+    background-color: #0a9396;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+#submit-quiz:hover {
+    background-color: #005f73;
+}
+#quiz-results {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+.quiz-question textarea {
+    width: 98%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+.correct {
+    color: green;
+}
+.incorrect {
+    color: red;
+}
+#quiz-results hr {
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+
+
+/* 資源 */
+#resources ul {
+    list-style-type: none;
+    padding: 0;
+}
+#resources li a {
+    text-decoration: none;
+    color: #005f73;
+}
+#resources li a:hover {
+    text-decoration: underline;
+}
