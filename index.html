@@ -20,7 +20,6 @@
         <a href="#vocab" class="tab-link">重點字詞</a>
         <a href="#quiz" class="tab-link">線上測驗</a>
         <a href="#advanced" class="tab-link">進階思辨</a>
-        <a href="#resources" class="tab-link">教學資源</a>
     </nav>
 
     <main>
@@ -104,28 +103,11 @@
         <!-- 線上測驗 -->
         <section id="quiz" class="tab-content">
             <h2>線上測驗</h2>
-            <div id="quiz-container">
-                <div class="card quiz-question">
-                    <p>1. (選擇題) 孔子在《論孝》中，認為只「能養」而「不敬」，與飼養甚麼沒有分別？</p>
-                    <label><input type="radio" name="q1" value="a"> A. 雞、豬</label><br>
-                    <label><input type="radio" name="q1" value="b"> B. 犬、馬</label><br>
-                    <label><input type="radio" name="q1" value="c"> C. 魚、鳥</label><br>
+            <p>每日更新題目 (2條選擇題 + 1條長問答)</p>
+            <div class="card">
+                <div id="quiz-content">
+                    <!-- Quiz questions will be dynamically loaded here by script.js -->
                 </div>
-                <div class="card quiz-question">
-                    <p>2. (選擇題) 「事父母幾諫」一句中的「幾」字是甚麼意思？</p>
-                    <label><input type="radio" name="q2" value="a"> A. 幾次</label><br>
-                    <label><input type="radio" name="q2" value="b"> B. 幾乎</label><br>
-                    <label><input type="radio" name="q2" value="c"> C. 輕微、委婉</label><br>
-                </div>
-                <div class="card quiz-question">
-                    <p>3. (中難度長問題) 孔子對孟懿子說「無違」，並闡述為「生，事之以禮；死，葬之以禮，祭之以禮。」請解釋為什麼「不違背禮節」是孝的重要體現。</p>
-                    <textarea id="q3" rows="5" placeholder="請在此輸入你的答案..."></textarea>
-                </div>
-                <div class="card quiz-question">
-                    <p>4. (高難度應用題) 你的父母沉迷於手機短影片，影響了他們的健康和正常作息。請結合「事父母幾諫」的原則，構思一個具體的行動方案，既能表達你的關心，又能盡量避免直接衝突。</p>
-                    <textarea id="q4" rows="6" placeholder="請在此構思你的行動方案..."></textarea>
-                </div>
-
                 <button id="submit-quiz">提交答案</button>
                 <div id="quiz-results"></div>
             </div>
@@ -138,19 +120,6 @@
                 <h3>現代反思：「事父母幾諫」是否適用於現今社會？</h3>
                 <p><strong>正方觀點：</strong>適用。現代社會同樣講究輩分和禮貌。當意見不被父母接納時，若能保持恭敬，其實是尊重父母、維護家庭和諧的表現。委婉的溝通方式，往往比直接的斥責更有效。</p>
                 <p><strong>反方觀點：</strong>不完全適用。若父母犯下的是嚴重錯誤（如犯法），子女若仍然只是委婉勸諫而不作進一步行動，可能會縱容他們，導致更嚴重的後果。在這種情況下，尋求法律或專業協助可能才是真正對父母負責的表現。</p>
-            </div>
-        </section>
-
-        <!-- 教學資源 -->
-        <section id="resources" class="tab-content">
-            <h2>教學資源</h2>
-            <div class="card">
-                <p>此處為教師提供所有相關筆記、習作及答案的下載連結。</p>
-                <ul>
-                    <li><a href="#" download>《論孝》課堂筆記.pdf</a></li>
-                    <li><a href="#" download>《論孝》課後習作 (附答案).pdf</a></li>
-                    <li><a href="#" download>《論孝》重點字詞表.pdf</a></li>
-                </ul>
             </div>
         </section>
     </main>
